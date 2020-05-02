@@ -103,7 +103,7 @@ String monitorBluetooth() {
 void notifyApp(float currentWeight) {
   // Bluetooth module is connected to HW serial,
   // to avoid overhead, since we're using the regular Nano
-  Serial.print(currentWeight);
+  Serial.print(currentWesight);
 }
 
 float retrieveCurrentWeight() {
@@ -121,9 +121,6 @@ void handleIncomingOrder(String command) {
   // Convert command to raw bytes
   byte commandBuffer[command.length() + 1]; // alloc buffer
   command.getBytes(commandBuffer, command.length() + 1); // parse string into buffer
-
-  Serial.println(command);
-  Serial.println(command.length());
   
   // Check for length
   if (command.length() == 3) {

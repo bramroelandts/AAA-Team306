@@ -103,7 +103,7 @@ String monitorBluetooth() {
 void notifyApp(float currentWeight) {
   // Bluetooth module is connected to HW serial,
   // to avoid overhead, since we're using the regular Nano
-  Serial.print(currentWesight);
+  Serial.print(currentWeight);
 }
 
 float retrieveCurrentWeight() {
@@ -267,7 +267,7 @@ void emptyReservoir() {
   delayWhileAlarming(2500);
 
   // Keep the user updated
-  displayOnLCD("Order afladen..","");
+  displayOnLCD("Order afladen...","");
   delay(1000);
   
   // Empty the reservoir

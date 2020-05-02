@@ -66,7 +66,7 @@ void setup() {
 void resetMachineState() {
 
   // Set a welcome message
-  displayOnLCD("AAA Team 306", "Ready for order");
+  displayOnLCD("AAA Team 306", "Klaar voor order");
   
   // Write an initial position to the servo's
   platformServo.write(5);
@@ -116,7 +116,7 @@ float retrieveCurrentWeight() {
 void handleIncomingOrder(String command) {
 
   // Provide visual feedback
-  displayOnLCD("Order received", "Processing...");
+  displayOnLCD("Order ontvangen", "Verwerken...");
   
   // Convert command to raw bytes
   byte commandBuffer[command.length() + 1]; // alloc buffer
